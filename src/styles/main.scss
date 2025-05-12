@@ -1,0 +1,107 @@
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.btn {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.filters {
+  margin: 10px 0;
+  &__button {
+    @extend .btn;
+  }
+}
+
+.task-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.task-block {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 300px;
+  background-color: #f9f9f9;
+
+  &--completed{
+    max-width: 300px;
+
+        @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.completed-tasks {
+    
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  &__button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  &__input {
+    flex: 1;
+    padding: 6px;
+  }
+  &__button {
+    padding: 6px 12px;
+  }
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+
+  &--done span {
+    text-decoration: line-through;
+    color: gray;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__buttons {
+    margin-left: auto;
+    min-width: 200px;
+    
+    button {
+      margin-left: 8px;
+    }
+  }
+}
