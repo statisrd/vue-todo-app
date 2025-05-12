@@ -18,7 +18,7 @@
           @edit-task="editTask"
         />
       </div>
-      <!-- Блок с выполненными задачами -->
+
       <div class="task-block task-block--completed">
         <completed-tasks
           :tasks="completedTasks"
@@ -50,7 +50,6 @@ export default {
       return this.filterTasks(this.filter);
     },
 
-    // Массив выполненных задач для отдельного блока
     completedTasks() {
       return this.tasks.filter(task => task.completed);
     },
